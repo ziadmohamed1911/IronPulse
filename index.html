@@ -229,6 +229,92 @@
                 </div>
             </div>
         </section>
+        <section class="section" id="contact">
+
+            <p class="eyebrow">contact</p>
+            <h2>Start Your Journey</h2>
+
+            <p class="sub-text">Fill in the form and we will get back to you within 24 hours</p>
+
+            <div class="contact-card">
+                <form id="contact-form" novalidate>
+                    <div class="field">
+                        <label for="full-name">Full name</label>
+                        <input type="text" id="full-name" name="full name" placeholder="Your full name" autocomplete="name" required>
+                        <p class="field__error" id="fullName-error"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="phone-number">Phone number</label>
+                        <input type="text" id="phone-number" name="phone number" placeholder="+20 100 000 0000" autocomplete="tel" inputmode="tel" required>
+                        <p class="field__error" id="phone-error"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="plan-select">Interested plan</label>
+                        <div class="select">
+                            <select id="plan-select" aria-placeholder="Choose a plan" required name="plan">
+                                <option value="" disabled selected hidden>Choose a plan</option>
+                                <option value="basic">Basic</option>
+                                <option value="pro">Pro</option>
+                                <option value="elite">Elite</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <p class="field__error" id="plan-error"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" maxlength="500" name="message" required placeholder="Your goals, schedule, or any questions"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+        <div class="contact__card contact__info">
+            <div class="info-row">
+                <div class="info-row__icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                <div>
+                    <p class="info-row__label">Address</p>
+                    <p class="info-row__value">Cairo, Egypt</p>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-row__icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></div>
+                <div>
+                    <p class="info-row__label">Opening hours</p>
+                    <p class="info-row__value">Sat–Thu, 6 AM to 11 PM</p>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-row__icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+                <div>
+                    <p class="info-row__label">Phone</p>
+                    <p class="info-row__value"><a href="tel:+201000000000">+20 100 000 0000</a></p>
+                </div>
+            </div>
+        </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer-logo">IronPulse</div>
+            <p class="footer-tagline">Train hard. Recover harder.</p>
+
+            <ul class="footer-links">
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <p class="copyright">&copy; 2026 IronPulse Fitness. All rights reserved.</p>
+</footer>
 </body>
 </html>
