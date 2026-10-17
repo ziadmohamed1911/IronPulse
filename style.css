@@ -1,0 +1,70 @@
+:root {
+    --bg: #111111; 
+    --card: #1A1A1A;
+    --accent: #FF5A1F;
+    --radius-card: 24px;
+    --radius-piller: 999px;
+}
+
+/* ==============layout========== */
+
+/* basic */
+
+body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg);
+}
+
+/* navbar */
+nav li{
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: var(--card);
+    margin: 1em;
+    border-radius: var(--radius-piller);
+    outline: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+nav ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    gap: 24px;
+}
+
+.menu-toggle{
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.logo{
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+
+/* Responsive */
+
+@media (min-width: 768px){
+    .menue-toggle{
+        display: none;
+    }
+    nav ul{
+        display: flex;
+    }
+}
