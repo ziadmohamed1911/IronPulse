@@ -176,6 +176,66 @@ nav ul {
     font-size: 0.812rem;
 }
 
+/* pricing */
+
+.plan{
+    display: flex;
+    flex-direction: column;
+    padding: 1.25em;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    background: var(--card);
+}
+
+.featured{
+    border-color: var(--accent);
+}
+
+.plan-badge{
+    align-self: flex-start;
+    margin-bottom: 1.2em;
+    background-color: var(--accent);
+    padding: 1.2em 0.6em;
+    border-radius: var(--radius-piller);
+    font-size: 0.625rem;
+    
+}
+
+.plan h3{
+    margin: 0 0 0.6em;
+    font-size: 1.25rem;
+}
+
+.plan p{
+    font-size: 2rem;
+    margin: 0 0 0.5em;
+    padding-bottom: 0.63em;
+    border-bottom: 1px solid var(--border);
+    font-size: bold;
+}
+
+.monthly{
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    margin-left: 0.298em;
+}
+
+.plan-features{
+    display: flex;
+    flex-direction: column;
+    gap: 0.86em;
+    margin-top: 0 0 1.43em;
+    padding: 0;
+    list-style: none;
+    font-size: 0.875rem;
+}
+
+.plan-features i{
+    color: var(--accent);
+    margin-right: 0.57em;
+}
+
 /* buttons (can be reused) */
 
 .btn{
