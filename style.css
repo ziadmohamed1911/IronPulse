@@ -236,6 +236,47 @@ nav ul {
     margin-right: 0.57em;
 }
 
+
+.trainer-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 0.85;
+    margin-bottom: 16px;
+    border-radius: var(--radius-card);
+    background: #262626;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 40px;
+    overflow: hidden;
+}
+
+.trainer-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trainer{
+    margin-bottom: 1.125em;
+}
+
+.trainer h3{
+    font-size: 1.125rem;
+    margin: 0 0 0.22em;
+}
+
+.trainer-role{
+    font-size: 0.875rem;
+    margin: 0 0 0.578em;
+    color: var(--accent);
+}
+
+.trainer-bio{
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--secondry);
+}
+
 /* buttons (can be reused) */
 
 .btn{
