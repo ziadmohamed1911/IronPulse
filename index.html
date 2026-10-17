@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join IronPulse Fitness for group classes, expert trainers, and flexible memberships. Start your journey today.">
 
-    <!-- fontAwsome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- GoogleFont -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <title>IronPulse Fitness | Gym & Training Classes in Cairo</title>
+    <title>IronPulse Fitness | Gym &amp; Training Classes in Cairo</title>
 </head>
 <body>
     <header>
         <nav>
-           <div class="logo">IRONPULSE</div>
-            <ul>
+            <div class="logo">IRONPULSE</div>
+            <ul id="nav-links">
                 <li><a href="#classes">Classes</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#trainers">Trainers</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="open menu">
-            <i class="fa-solid fa-bars"></i>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+                <i class="fa-solid fa-bars" id="toggle-icon"></i>
             </button>
         </nav>
     </header>
+
     <main>
-        <section class="hero" id="home">
+        <!-- HERO -->
+        <section class="hero" id="hero">
             <div class="hero-info">
-                <p class="eyebrow">CAIRO’S #1 GYM</p>
+                <p class="eyebrow">Cairo’s #1 Gym</p>
                 <h1>Build Your <span class="accent">Strongest</span> Self</h1>
                 <p class="hero-text">
-                    Expert coaches.<br> 
+                    Expert coaches.<br>
                     Modern equipment.<br>
                     Real results.
                 </p>
@@ -46,116 +50,109 @@
             </div>
         </section>
 
+        <!-- CLASSES -->
         <section class="section" id="classes">
-            <p class="eyebrow">our classes</p>
-            <h3 class="section-phrase">find your training style</h3>
+            <div class="section-header">
+                <p class="eyebrow">Our Classes</p>
+                <h2>Find Your Training Style</h2>
+            </div>
             <div class="grid">
                 <article class="class-card">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-dumbbell"></i>
-                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i></div>
                     <h3>Strength</h3>
                     <p>Build muscle with guided weight training.</p>
                     <p class="card-time">Mon / Wed / Fri · 6:00 PM</p>
                 </article>
 
                 <article class="class-card">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-heart-pulse"></i>
-                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
                     <h3>Cardio</h3>
                     <p>High-energy sessions to boost endurance.</p>
                     <p class="card-time">Tue / Thu · 7:00 PM</p>
                 </article>
 
                 <article class="class-card">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-person-rays"></i>
-                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-person-rays" aria-hidden="true"></i></div>
                     <h3>Yoga</h3>
                     <p>Improve flexibility, balance and recovery.</p>
                     <p class="card-time">Sat · 10:00 AM</p>
                 </article>
 
                 <article class="class-card">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-hand-fist"></i>
-                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-hand-fist" aria-hidden="true"></i></div>
                     <h3>Boxing</h3>
-                    <p>Learn technique and burning serious calories.</p>
+                    <p>Learn technique and burn serious calories.</p>
                     <p class="card-time">Mon / Wed · 8:00 PM</p>
                 </article>
             </div>
         </section>
-        
+
+        <!-- PRICING -->
         <section class="section" id="pricing">
-
-            <p class="eyebrow">Pricing</p>
-            <h2>Choose your plan</h2>
-
+            <div class="section-header">
+                <p class="eyebrow">Pricing</p>
+                <h2>Choose Your Plan</h2>
+            </div>
             <div class="grid">
                 <article class="plan">
                     <h3>Basic</h3>
-                    <p class="plan-price">400<span class="monthly">EGP/month</span></p>
+                    <p class="plan-price">400<span class="plan-period">EGP/month</span></p>
                     <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i>Gym access</li>
-                        <li><i class="fa-solid fa-check"></i>Locker room</li>
-                        <li><i class="fa-solid fa-check"></i>1 free class a week</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Gym access</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Locker room</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>1 free class a week</li>
                     </ul>
                     <a href="#contact" class="btn outlined-btn">Get Started</a>
                 </article>
 
-                 <article class="plan featured">
-                    <span class="plan-badge">Most Populer</span>
+                <article class="plan plan-featured">
+                    <span class="plan-badge">Most Popular</span>
                     <h3>Pro</h3>
-                    <p class="plan-price">700<span class="monthly">EGP/month</span></p>
+                    <p class="plan-price">700<span class="plan-period">EGP/month</span></p>
                     <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i>Everything in Basic</li>
-                        <li><i class="fa-solid fa-check"></i>Unlimited classes</li>
-                        <li><i class="fa-solid fa-check"></i>2 Trainer sessions</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Everything in Basic</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Unlimited classes</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>2 Trainer sessions</li>
                     </ul>
                     <a href="#contact" class="btn primary-btn">Get Started</a>
                 </article>
 
-                 <article class="plan">
+                <article class="plan">
                     <h3>Elite</h3>
-                    <p class="plan-price">1,100<span class="monthly">EGP/month</span></p>
+                    <p class="plan-price">1,100<span class="plan-period">EGP/month</span></p>
                     <ul class="plan-features">
-                        <li><i class="fa-solid fa-check"></i>Everything in Pro</li>
-                        <li> <i class="fa-solid fa-check"></i>Personal coach</li>
-                        <li> <i class="fa-solid fa-check"></i>Nutrition plan</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Everything in Pro</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Personal coach</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Nutrition plan</li>
                     </ul>
                     <a href="#contact" class="btn outlined-btn">Get Started</a>
                 </article>
+            </div>
         </section>
-        <section class="section" id="trainers">
-            
-            <p class="eyebrow">our team</p>
-            <h2>Meet Your Trainers</h2>
 
+        <!-- TRAINERS -->
+        <section class="section" id="trainers">
+            <div class="section-header">
+                <p class="eyebrow">Our Team</p>
+                <h2>Meet Your Trainers</h2>
+            </div>
             <div class="grid">
                 <article class="trainer">
-                    <div class="trainer-photo">
-                        <i class="fa-regular fa-user"></i>
-                    </div>
+                    <div class="trainer-photo"><i class="fa-regular fa-user" aria-hidden="true"></i></div>
                     <h3>Omar Hassan</h3>
                     <p class="trainer-role">Strength &amp; Conditioning</p>
                     <p class="trainer-bio">8 years of coaching experience.</p>
                 </article>
 
                 <article class="trainer">
-                    <div class="trainer-photo">
-                        <i class="fa-regular fa-user"></i>
-                    </div>
+                    <div class="trainer-photo"><i class="fa-regular fa-user" aria-hidden="true"></i></div>
                     <h3>Nour Khaled</h3>
                     <p class="trainer-role">Yoga &amp; Mobility</p>
                     <p class="trainer-bio">6 years of coaching experience.</p>
                 </article>
 
                 <article class="trainer">
-                    <div class="trainer-photo">
-                        <i class="fa-regular fa-user"></i>
-                    </div>
+                    <div class="trainer-photo"><i class="fa-regular fa-user" aria-hidden="true"></i></div>
                     <h3>Karim Samy</h3>
                     <p class="trainer-role">Boxing &amp; Cardio</p>
                     <p class="trainer-bio">10 years of coaching experience.</p>
@@ -163,11 +160,12 @@
             </div>
         </section>
 
+        <!-- TESTIMONIALS -->
         <section class="section" id="testimonials">
-
-            <p class="eyebrow">testimonials</p>
-            <h2>What Our Members Say</h2>
-
+            <div class="section-header">
+                <p class="eyebrow">Testimonials</p>
+                <h2>What Our Members Say</h2>
+            </div>
             <div class="grid">
                 <article class="testimonial">
                     <div class="stars" role="img" aria-label="5 out of 5 stars">
@@ -181,9 +179,7 @@
                         “I lost 12 kg in four months. The trainers actually care about your progress.”
                     </blockquote>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <i class="fa-regular fa-user"></i>
-                        </div>
+                        <div class="testimonial-avatar"><i class="fa-regular fa-user" aria-hidden="true"></i></div>
                         <p><strong>Sara Ahmed,</strong><span> Member for 1 year</span></p>
                     </div>
                 </article>
@@ -196,19 +192,15 @@
                         <i class="fa-solid fa-star" aria-hidden="true"></i>
                         <i class="fa-solid fa-star" aria-hidden="true"></i>
                     </div>
-
                     <blockquote class="testimonial-quote">
                         “Best gym in the area. The boxing classes are intense, and the atmosphere is great.”
                     </blockquote>
-
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <i class="fa-regular fa-user"></i>
-                        </div>
+                        <div class="testimonial-avatar"><i class="fa-regular fa-user" aria-hidden="true"></i></div>
                         <p><strong>Youssef Ali,</strong><span> Member for 8 months</span></p>
                     </div>
                 </article>
-                
+
                 <article class="testimonial">
                     <div class="stars" role="img" aria-label="5 out of 5 stars">
                         <i class="fa-solid fa-star" aria-hidden="true"></i>
@@ -220,40 +212,42 @@
                     <blockquote class="testimonial-quote">
                         “The yoga sessions helped my back pain and my stress levels. Highly recommended.”
                     </blockquote>
-                    <article class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <i class="fa-regular fa-user"></i>
-                        </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"><i class="fa-regular fa-user" aria-hidden="true"></i></div>
                         <p><strong>Mariam Adel,</strong><span> Member for 2 years</span></p>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
+
+        <!-- CONTACT -->
         <section class="section" id="contact">
-
-            <p class="eyebrow">contact</p>
-            <h2>Start Your Journey</h2>
-
-            <p class="sub-text">Fill in the form and we will get back to you within 24 hours</p>
+            <div class="section-header">
+                <p class="eyebrow">Contact</p>
+                <h2>Start Your Journey</h2>
+                <p class="sub-text">Fill in the form and we will get back to you within 24 hours.</p>
+            </div>
 
             <div class="contact-card">
                 <form id="contact-form" novalidate>
                     <div class="field">
                         <label for="full-name">Full name</label>
-                        <input type="text" id="full-name" name="full name" placeholder="Your full name" autocomplete="name" required>
-                        <p class="field__error" id="fullName-error"></p>
+                        <input type="text" id="full-name" name="fullName" placeholder="Your full name"
+                               autocomplete="name" required aria-describedby="full-name-error">
+                        <p class="field-error" id="full-name-error"></p>
                     </div>
 
                     <div class="field">
                         <label for="phone-number">Phone number</label>
-                        <input type="text" id="phone-number" name="phone number" placeholder="+20 100 000 0000" autocomplete="tel" inputmode="tel" required>
-                        <p class="field__error" id="phone-error"></p>
+                        <input type="tel" id="phone-number" name="phone" placeholder="+20 100 000 0000"
+                               autocomplete="tel" inputmode="tel" required aria-describedby="phone-number-error">
+                        <p class="field-error" id="phone-number-error"></p>
                     </div>
 
                     <div class="field">
                         <label for="plan-select">Interested plan</label>
                         <div class="select">
-                            <select id="plan-select" aria-placeholder="Choose a plan" required name="plan">
+                            <select id="plan-select" name="plan" required aria-describedby="plan-select-error">
                                 <option value="" disabled selected hidden>Choose a plan</option>
                                 <option value="basic">Basic</option>
                                 <option value="pro">Pro</option>
@@ -261,60 +255,66 @@
                             </select>
                             <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                         </div>
-                        <p class="field__error" id="plan-error"></p>
+                        <p class="field-error" id="plan-select-error"></p>
                     </div>
 
                     <div class="field">
                         <label for="message">Message</label>
-                        <textarea id="message" rows="4" maxlength="500" name="message" required placeholder="Your goals, schedule, or any questions"></textarea>
+                        <textarea id="message" name="message" rows="4" maxlength="500"
+                                  placeholder="Your goals, schedule, or any questions"></textarea>
                     </div>
 
-                    <button type="submit" class="btn primary-btn">Send Message</button>
+                    <button type="submit" class="btn primary-btn" id="submit-btn">Send Message</button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
-        <div class="contact__card contact__info">
-            <div class="info-row">
-                <div class="info-row__icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
-                <div>
-                    <p class="info-row__label">Address</p>
-                    <p class="info-row__value">Cairo, Egypt</p>
+
+            <div class="contact-card contact-info">
+                <div class="info-row">
+                    <div class="info-row-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                    <div>
+                        <p class="info-row-label">Address</p>
+                        <p class="info-row-value">Cairo, Egypt</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-row-icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></div>
+                    <div>
+                        <p class="info-row-label">Opening hours</p>
+                        <p class="info-row-value">Sat–Thu, 6 AM to 11 PM</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-row-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+                    <div>
+                        <p class="info-row-label">Phone</p>
+                        <p class="info-row-value"><a href="tel:+201000000000">+20 100 000 0000</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="info-row">
-                <div class="info-row__icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></div>
-                <div>
-                    <p class="info-row__label">Opening hours</p>
-                    <p class="info-row__value">Sat–Thu, 6 AM to 11 PM</p>
-                </div>
-            </div>
-            <div class="info-row">
-                <div class="info-row__icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
-                <div>
-                    <p class="info-row__label">Phone</p>
-                    <p class="info-row__value"><a href="tel:+201000000000">+20 100 000 0000</a></p>
-                </div>
-            </div>
-        </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer-logo">IronPulse</div>
-            <p class="footer-tagline">Train hard. Recover harder.</p>
+        <p class="footer-tagline">Train hard. Recover harder.</p>
 
-            <ul class="footer-links">
-                <li><a href="#classes">Classes</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#trainers">Trainers</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <ul class="footer-links">
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-            <div class="socials">
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <div class="socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
         </div>
 
         <p class="copyright">&copy; 2026 IronPulse Fitness. All rights reserved.</p>
-</footer>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
