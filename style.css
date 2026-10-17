@@ -2,8 +2,11 @@
     --bg: #111111; 
     --card: #1A1A1A;
     --accent: #FF5A1F;
+    --border: rgba(255, 255, 255, 0.1);
     --radius-card: 24px;
+    --secondry: rgba(255, 255, 255, 0.7);;
     --radius-piller: 999px;
+    --transition: 0.3s ease-in-out;
 }
 
 /* ==============layout========== */
@@ -14,7 +17,20 @@ body{
     margin: 0;
     font-family: "Inter", sans-serif;
     background-color: var(--bg);
+    color: #ffff;
 }
+
+.section{
+    padding: 40px 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+
 
 /* navbar */
 nav li{
@@ -33,7 +49,7 @@ nav {
     background-color: var(--card);
     margin: 1em;
     border-radius: var(--radius-piller);
-    outline: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--border)
 }
 
 nav ul {
@@ -58,7 +74,150 @@ nav ul {
 }
 
 
-/* Responsive */
+/* hero */
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5em;
+    min-height: 380px;
+    margin: 2.5em 1.25em 0 1.25em;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    background: linear-gradient(
+            to bottom,
+            rgba(17, 17, 17, 0.9) 0%,
+            rgba(17, 17, 17, 0) 45%,
+            rgba(17, 17, 17, 0.85) 100%
+        ),url("/images/hero-background.jpg") center / cover no-repeat;
+    transition: var(--transition);
+}
+
+.hero:hover,
+.hero:focus{
+    transform: scale(1.01);
+}
+
+
+.eyebrow {
+    font-weight: bold;
+    margin: 0 0 0.67em;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.hero h1{
+    margin: 0 0 0.44em;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.accent{
+    color: var(--accent);
+}
+
+.hero-text {
+    margin: 0;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+
+/* classes */
+
+
+.class-card{
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    background: var(--card);
+    transition: var(--transition);
+}
+
+.class-card:hover,
+.class-card:focus{
+    transform: scale(1.05);
+}
+
+.card-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-piller);
+    font-size: 1.125rem;
+    margin-bottom: 0.889em;
+    color: #ffff;
+}
+
+.class-card h3{
+    margin: 0 0 8px;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.class-card p{
+    color: var(--secondry);
+    margin: 0 0 12px;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+.class-card .card-time{
+    color: var(--accent);
+    margin: 0;
+    font-size: 0.812rem;
+}
+
+/* buttons (can be reused) */
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 56px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-piller);
+    margin-bottom: 0.5em;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.primary-btn{
+    color: #ffff;
+    background-color: var(--accent);
+}
+
+.primary-btn:hover,
+.primary-btn:focus{
+    background: #ff7242;
+    transform: scale(1.03);
+}
+
+.outlined-btn {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.outlined-btn:hover,
+.outlined-btn:focus{
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: scale(1.03);
+}
+
+
+/* ===============Responsive================ */
 
 @media (min-width: 768px){
     .menue-toggle{
