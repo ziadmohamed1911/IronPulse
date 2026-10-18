@@ -27,7 +27,8 @@ html {
 
 body {
     margin: 0;
-    font-family: "Inter", sans-serif;
+    /* system fallbacks look close to Inter while the web font loads */
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     background-color: var(--bg);
     color: #fff;
 }
@@ -198,6 +199,10 @@ nav ul.open {
 /* ============== hero ============== */
 
 .hero {
+    /* isolation keeps the image and overlay layers inside the hero */
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -207,15 +212,33 @@ nav ul.open {
     padding: 20px;
     border: 1px solid var(--border);
     border-radius: var(--radius-card);
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(17, 17, 17, 0.9) 0%,
-            rgba(17, 17, 17, 0) 45%,
-            rgba(17, 17, 17, 0.85) 100%
-        ),
-        url("images/hero-background.jpg") center / cover no-repeat;
+    background-color: var(--card);
     transition: var(--transition);
+}
+
+/* the photo is now an <img> in the HTML, so the browser finds it early */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* same gradient as before, now as an overlay on top of the image */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(17, 17, 17, 0.9) 0%,
+        rgba(17, 17, 17, 0) 45%,
+        rgba(17, 17, 17, 0.85) 100%
+    );
 }
 
 .hero:hover {

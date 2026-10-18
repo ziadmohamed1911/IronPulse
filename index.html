@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join IronPulse Fitness for group classes, expert trainers, and flexible memberships. Start your journey today.">
+    <title>IronPulse Fitness | Gym &amp; Training Classes in Cairo</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <!-- Google Font -->
+    <!-- Preconnect early so the font files start downloading sooner -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
+    <!-- Google Font: Inter (variable font, one file for all weights; non-blocking, with display=swap) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Font Awesome (non-blocking so it doesn't delay the first paint) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+
+    <!-- Main stylesheet stays render-blocking on purpose, to avoid unstyled content -->
     <link rel="stylesheet" href="style.css">
-    <title>IronPulse Fitness | Gym &amp; Training Classes in Cairo</title>
 </head>
 <body>
     <header>
@@ -35,6 +41,9 @@
     <main>
         <!-- HERO -->
         <section class="hero" id="hero">
+            <!-- Real <img> instead of a CSS background: found early and loaded at high priority.
+                 Compress it to .webp (about 150 KB or less) and update the file name here. -->
+            <img class="hero-bg" src="images/hero-background.jpg" alt="" fetchpriority="high" decoding="async">
             <div class="hero-info">
                 <p class="eyebrow">Cairo’s #1 Gym</p>
                 <h1>Build Your <span class="accent">Strongest</span> Self</h1>
@@ -315,6 +324,6 @@
         <p class="copyright">&copy; 2026 IronPulse Fitness. All rights reserved.</p>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </body>
 </html>
