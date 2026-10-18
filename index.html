@@ -43,7 +43,10 @@
         <section class="hero" id="hero">
             <!-- Real <img> instead of a CSS background: found early and loaded at high priority.
                  Compress it to .webp (about 150 KB or less) and update the file name here. -->
-            <img class="hero-bg" src="images/hero-background.jpg" alt="" fetchpriority="high" decoding="async">
+            <img class="hero-bg" src="images/hero-1600.webp"
+            srcset="images/hero-800.webp 800w, images/hero-1600.webp 1600w"
+            sizes="(min-width: 768px) 1100px, 100vw"
+            alt="" fetchpriority="high" decoding="async">
             <div class="hero-info">
                 <p class="eyebrow">Cairo’s #1 Gym</p>
                 <h1>Build Your <span class="accent">Strongest</span> Self</h1>
