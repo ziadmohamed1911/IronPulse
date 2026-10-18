@@ -439,6 +439,12 @@ nav ul.open {
     border: 1px solid var(--border);
     border-radius: var(--radius-card);
     background: var(--card);
+    transition: var(--transition);
+}
+
+.testimonial:hover,
+.testimonial:focus{
+    transform: scale(1.04);
 }
 
 .stars {
